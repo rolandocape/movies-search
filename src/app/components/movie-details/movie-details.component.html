@@ -1,0 +1,10 @@
+<div class="movie-container" *ngIf="movieDetails">
+  <a><img src=""></a>
+  <h3>title: {{movieDetails.title}}</h3>
+  <p>overview: {{movieDetails.overview}}</p>
+</div>
+
+<div *ngIf="!movieDetails">
+  Loading.....
+</div>
+
