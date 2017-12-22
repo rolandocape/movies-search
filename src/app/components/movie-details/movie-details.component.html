@@ -1,10 +1,39 @@
 <div class="movie-container" *ngIf="movieDetails">
-  <a><img src="https://image.tmdb.org/t/p/w500/{{movieDetails.poster_path}}"></a>
-  <h3>title: {{movieDetails.title}}</h3>
-  <p>overview: {{movieDetails.overview}}</p>
+  <div class="box-1">
+    <a><img src="https://image.tmdb.org/t/p/w500/{{movieDetails.poster_path}}"></a>
+  </div>
+  <div class="box-2">
+    <h1>{{movieDetails.title}}<a> ({{movieDetails.release_date.substring(0,4)}})</a></h1>
+    <h2>Overview</h2>
+    <p class="overview">{{movieDetails.overview}}</p>
+    <p><span class="label">Original Title: </span>{{movieDetails.original_title}}</p>
+    <p><span class="label">Language: </span>{{movieDetails.original_language}}</p>
+    <p><span class="label">Runtime: </span>{{movieDetails.runtime.toString().substring(0,1)}}h {{movieDetails.runtime.toString().substring(1,3)}} min</p>
+    <p><span class="label">Popularity: </span>{{movieDetails.popularity}}</p>
+    <!--date Pipe-->
+    <p><span class="label">Release Date: </span>{{movieDetails.release_date| date: 'MM/dd/yyyy'}}</p>
+    <!--currencyPipe-->
+    <p><span class="label">Budget: </span>{{movieDetails.budget | currency}}</p>
+    <p><span class="label">Revenue: </span>{{movieDetails.revenue | currency}}</p>
+    <p><span class="label">Votes: </span>{{movieDetails.vote_count}}</p>
+    <p><span class="label"> Rating: </span>{{movieDetails.vote_average}}/10</p>
+    <p>
+      <span class="label">Genre: </span>
+      <span class="chip" *ngFor="let genre of genres">
+        {{genre.name}}
+      </span>
+    </p>
+    <p>
+      <span class="label">Production: </span>
+      <span class="chip" *ngFor="let company of companies">
+        {{company.name}}
+      </span>
+    </p>
+    <p><span class="label">Website: </span><a href="{{movieDetails.homepage}}">{{movieDetails.homepage}}</a></p>
+  </div>
 </div>
 
 <div *ngIf="!movieDetails">
-  <mat-spinner></mat-spinner>
+  <mat-spinner class="spinner-style"></mat-spinner>
 </div>
 

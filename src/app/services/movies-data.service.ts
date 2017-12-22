@@ -13,7 +13,7 @@ export class MoviesDataService {
       .map(res => res.json());
   }
 
-  getMovieDetails(movie_id){
+  getMovieDetails(movie_id) {
     return this.http.get(`/api/movie/${movie_id}?api_key=${apiKey}`)
       .map(res => {
         return res.json();

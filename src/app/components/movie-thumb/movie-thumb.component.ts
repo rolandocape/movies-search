@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-movie-thumb',
@@ -10,7 +10,6 @@ export class MovieThumbComponent implements OnInit {
   @Output() onSelect = new EventEmitter();
 
   ngOnInit() {
-    console.log(this.movie);
   }
 
   handleSelect() {

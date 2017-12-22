@@ -1,1 +1,13 @@
+:host {
+  width: 300px;
+  margin: 40px 10px 0 10px;
+  cursor: pointer;
+}
 
+:host:hover {
+  opacity: 0.5;
+}
+
+:host:last-child {
+  margin-bottom: 10px;
+}
