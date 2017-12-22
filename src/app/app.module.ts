@@ -4,7 +4,9 @@ import {HttpModule} from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatProgressSpinnerModule, MatCardModule} from '@angular/material';
+
+
 
 import {AppComponent} from './app.component';
 import {MoviesListComponent} from './components/movies-list/movies-list.component';
@@ -32,7 +34,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatCardModule
   ],
   providers: [MoviesDataService],
   bootstrap: [AppComponent]

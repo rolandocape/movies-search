@@ -1,10 +1,10 @@
 <div class="movie-container" *ngIf="movieDetails">
-  <a><img src=""></a>
+  <a><img src="https://image.tmdb.org/t/p/w500/{{movieDetails.poster_path}}"></a>
   <h3>title: {{movieDetails.title}}</h3>
   <p>overview: {{movieDetails.overview}}</p>
 </div>
 
 <div *ngIf="!movieDetails">
-  Loading.....
+  <mat-spinner></mat-spinner>
 </div>
 
