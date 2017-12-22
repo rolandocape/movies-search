@@ -3,12 +3,13 @@
     <a><img src="https://image.tmdb.org/t/p/w500/{{movieDetails.poster_path}}"></a>
   </div>
   <div class="box-2">
-    <h1>{{movieDetails.title}}<a> ({{movieDetails.release_date.substring(0,4)}})</a></h1>
+    <h1 style="margin-top:50px">{{movieDetails.title}}<a> ({{movieDetails.release_date.substring(0,4)}})</a></h1>
     <h2>Overview</h2>
     <p class="overview">{{movieDetails.overview}}</p>
     <p><span class="label">Original Title: </span>{{movieDetails.original_title}}</p>
     <p><span class="label">Language: </span>{{movieDetails.original_language}}</p>
-    <p><span class="label">Runtime: </span>{{movieDetails.runtime.toString().substring(0,1)}}h {{movieDetails.runtime.toString().substring(1,3)}} min</p>
+    <p><span class="label">Runtime: </span>{{movieDetails.runtime.toString().substring(0,1)}}h
+      {{movieDetails.runtime.toString().substring(1,3)}} min</p>
     <p><span class="label">Popularity: </span>{{movieDetails.popularity}}</p>
     <!--date Pipe-->
     <p><span class="label">Release Date: </span>{{movieDetails.release_date| date: 'MM/dd/yyyy'}}</p>
