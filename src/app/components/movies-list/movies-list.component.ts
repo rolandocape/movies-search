@@ -24,6 +24,7 @@ export class MoviesListComponent implements OnInit {
       .subscribe(moviesData => {
         this.movies = moviesData.results;
         this.topRated = moviesData.results;
+
       });
     this.form = new FormGroup({
       search: new FormControl('')

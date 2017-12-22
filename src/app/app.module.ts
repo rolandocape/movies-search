@@ -10,6 +10,7 @@ import {MoviesListComponent} from './components/movies-list/movies-list.componen
 import {MovieDetailsComponent} from './components/movie-details/movie-details.component';
 import {MoviesDataService} from './services/movies-data.service';
 import {MovieThumbComponent} from './components/movie-thumb/movie-thumb.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/movies', pathMatch: 'full'},
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,

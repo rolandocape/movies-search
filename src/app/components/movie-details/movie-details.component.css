@@ -11,8 +11,12 @@
   background-color: #2f2f2f;
 }
 
+img {
+  height: 100%;
+}
+
 .box-1 {
-  flex: 1;
+
 }
 
 .overview {
@@ -21,8 +25,9 @@
 }
 
 .box-2 {
-  flex: 3;
+  flex: 1;
   color: whitesmoke;
+  padding-left: 30px;
   margin: 0 !important;
 }
 
@@ -54,4 +59,42 @@ h1, h2, p {
   left: 50%;
   margin-left: -4em;
 
+}
+
+@media only screen and (max-width: 1000px) {
+  .box-1 {
+    flex: 1;
+  }
+
+  img {
+    width: 100%;
+    height: inherit;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+
+  .box-1 {
+    display: none !important;
+  }
+
+  .movie-container {
+    display: -webkit-box;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .movie-container {
+    flex-direction: column;
+  }
+
+  .box-1 {
+    display: flex;
+    float: right;
+  }
+
+  img {
+    width: inherit;
+    height: calc(100% + 40px);
+  }
 }
